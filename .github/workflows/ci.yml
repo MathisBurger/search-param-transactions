@@ -1,4 +1,4 @@
-name: Bun TypeScript Build and Publish
+name: CI tests
 
 on:
   push:
@@ -24,4 +24,4 @@ jobs:
         run: bun install
 
       - name: Compile TypeScript
-        run: bun build src/index.ts --outdir dist
+        run: bun build ./*.ts --outdir dist

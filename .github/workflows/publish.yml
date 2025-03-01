@@ -1,4 +1,4 @@
-name: Bun TypeScript Build and Publish
+name: Publish
 
 on:
   release:
@@ -43,7 +43,7 @@ jobs:
         run: bun install
 
       - name: Compile TypeScript
-        run: bun build src/index.ts --outdir dist
+        run: bun build ./*.ts --outdir dist
 
       - name: Publish to npm
         env:
