@@ -44,8 +44,7 @@ jobs:
       - name: Compile TypeScript
         run: bun build ./*.ts --outdir dist
 
-      - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm publish --access public
+      - name: Publish to NPM registry
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
