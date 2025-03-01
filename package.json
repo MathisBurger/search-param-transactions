@@ -3,18 +3,22 @@
   "type": "module",
   "version": "1.0.0",
   "source": "index.ts",
+  "author": {
+    "email": "handymathis@gmail.com",
+    "name": "Mathis Burger"
+  },
   "scripts": {
     "build": "bun build ./*.ts --outdir dist"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/react": "^19.0.10"
+    "@types/react": ">= 18"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "react": "^19.0.0",
+    "react": " >= 18",
     "react-router-dom": "^7.2.0"
   }
 }
