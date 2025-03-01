@@ -44,6 +44,11 @@ jobs:
       - name: Compile TypeScript
         run: bun build ./*.ts --outdir dist
 
+      - name: Login to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bunx npm login
+
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
